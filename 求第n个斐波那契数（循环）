@@ -1,0 +1,21 @@
+int fib(int n)
+{
+	int a=1, b=1, c=1;	//循环法求第n个斐波那契数
+	while(n>2)
+	{
+		c = a + b;
+		a = b;
+		b = c;
+		n--;
+	}
+	return c;
+}
+
+int main()
+{
+	int n = 8;
+	int ret = 0;
+	ret = fib(n);
+	printf("%d\n", ret);
+	return 0;
+}
